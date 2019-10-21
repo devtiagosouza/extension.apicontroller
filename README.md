@@ -1,6 +1,6 @@
 # apicontroller README
 
-This is the README for your extension "apicontroller". After writing up a brief description, we recommend including the following sections.
+Extensão para visual studio code para gerar classe de controller para projetos Asp.net core Web Api
 
 ## Features
 
