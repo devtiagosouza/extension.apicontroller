@@ -1,0 +1,32 @@
+namespace #{namespace}
+{
+    [Produces("application/json")]
+    [Route("api/[controller]")]
+    [ApiController]
+    public class #{classname} : ControllerBase
+    {
+        private readonly IRepository<#{modelname}> iRep;
+
+        public #{classname}(IRepository<#{modelname}> iRep)
+        {
+            this.iRep = iRep;
+        }
+
+ 
+        [HttpGet]
+        public IEnumerable<#{modelname}> GetAll()
+        {
+            return iRep.GetAll();
+        }
+
+        [HttpGet("{id}")]
+        public #{modelname} GetByID(int id)
+        {
+            return iRep.GetById(id);
+        }
+ 
+       
+
+        
+    }
+}
